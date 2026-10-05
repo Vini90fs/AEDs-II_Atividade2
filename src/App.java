@@ -209,8 +209,12 @@ public class App {
      * @param pedido O pedido que deve ser finalizado.
      */
     public static void finalizarPedido(Pedido pedido) {
-    	
-    	// TODO
+    	if(pedido != null){
+            pilhaPedidos.empilhar(pedido);
+            System.out.println("Pedido finalizado.");
+        }else{
+            System.out.println("Nenhum pedido para finalizar");
+        }
     }
     
     public static void listarProdutosPedidosRecentes() {
